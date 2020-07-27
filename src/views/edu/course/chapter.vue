@@ -204,6 +204,7 @@
       //添加小节弹框的方法
       openVideo(chapterId) {
         this.video = {},
+          this.fileList = [],
           //弹框
           this.dialogVideoFormVisible = true
         //设置章节id
