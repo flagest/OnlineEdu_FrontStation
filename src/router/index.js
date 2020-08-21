@@ -110,24 +110,24 @@ export const constantRouterMap = [
         meta: {title: '添加课程', icon: 'tree'}
       },
       {
-        path:'info/:id',
-        name:'EduCourseInfoEdit',
-        component:()=>import('@/views/edu/course/info'),
-        meta:{title:'编辑课程基本信息',noCache:true},
-        hidden:true,
+        path: 'info/:id',
+        name: 'EduCourseInfoEdit',
+        component: () => import('@/views/edu/course/info'),
+        meta: {title: '编辑课程基本信息', noCache: true},
+        hidden: true,
       },
       {
         path: 'chapter/:id',
         name: 'EduCourseChapterEdit',
         component: () => import('@/views/edu/course/chapter'),
-        meta: { title: '编辑课程大纲', noCache: true },
+        meta: {title: '编辑课程大纲', noCache: true},
         hidden: true
       },
       {
         path: 'publish/:id',
         name: 'EduCoursePublishEdit',
         component: () => import('@/views/edu/course/publish'),
-        meta: { title: '发布课程', noCache: true },
+        meta: {title: '发布课程', noCache: true},
         hidden: true
       }
     ]
@@ -143,6 +143,28 @@ export const constantRouterMap = [
         name: 'Form',
         component: () => import('@/views/form/index'),
         meta: {title: 'Form', icon: 'form'}
+      }
+    ]
+  },
+  {
+    path: '/sta',
+    component: Layout,
+    redirect: '/sta/table',
+    name: '统计分析',
+    meta: {title: '统计分析', icon: 'example'},
+    children: [
+      {
+        path: 'create',
+        name: '生成数据',
+        component: () => import('@/views/sta/create'),
+        meta: {title: '生成数据', icon: 'table'}
+      },
+      {
+        path: 'show',
+        name: '图标显示',
+        component: () => import('@/views/sta/show'),
+        meta: {title: '图标显示', icon: 'tree'}
+
       }
     ]
   },
